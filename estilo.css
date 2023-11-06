@@ -1,0 +1,94 @@
+* {
+    margin: auto;
+    padding: auto;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100%;
+    background: #202020;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.bubbles {
+    position: relative;
+    display: flex;
+}
+
+.bubbles span {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: #4fc3dc;
+    margin: 0 5px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #4fc3dc44,
+    0 0 50px #4fc3dc,
+    0 0 100px #4fc3dc;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(125s / var(--i));
+}
+
+
+.bubbles span:nth-child(even){
+    background: #ff2f75;
+    box-shadow: 0 0 0 10px #ff2f7544,
+    0 0 50px #ff2f75,
+    0 0 100px #ff2f75;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(100vh) scale(0);
+    }
+    100% {
+        transform: translateY(-10vh) scale(1);
+    }
+}
+.text {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    height: 50vh;
+    color:#fff;
+    border-color: #3b3b3b;
+}
+
+.text h1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 150px;
+    display: flex;
+    align-content: center;
+    margin: center;
+}
+
+.text h2 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.text input {
+    border-radius: 10px;
+    border: 5px #ff2f75;
+    text-align: center;
+    margin: 10px;
+    margin-top: 30px;
+}
+
+.text button {
+    display: block;
+    position: relative;
+    margin: 20px center;
+    margin-top: 30px;
+    border-radius: 5px;
+    border-color: #4fc3dc;
+    background-color: #3b3b3b;
+    color: #fff;
+}
+
